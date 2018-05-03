@@ -4,7 +4,7 @@ This plugin replaces standard WordPress commenting with [Talk](https://coralproj
 
 ## Setup
 
-First, you'll need a server running your own instance of Talk. See the Talk [installation guide](https://github.com/coralproject/talk/blob/master/INSTALL.md) for more info about that.
+First, you'll need a server running your own instance of Talk. See the [Talk Docs](https://docs.coralproject.net/talk/) for more info about that.
 
 Then...
 
@@ -17,7 +17,7 @@ Then...
 
 Your site must be served over `https` in order to integrate with Talk **unless** Talk is set to dev mode.
 
-If you're installing Talk with Docker, you can do that by adding `NODE_ENV=dev` to the environment variables in your [`docker-compose.yml`](https://github.com/coralproject/talk/blob/master/INSTALL.md#installing). Otherwise, any method of setting `process.env.NODE_ENV = 'dev'` will do the trick.
+If you're installing Talk with Docker, you can do that by adding `NODE_ENV=dev` to the environment variables in your [`docker-compose.yml`](https://docs.coralproject.net/talk/installation-from-docker/). Otherwise, any method of setting `process.env.NODE_ENV = 'dev'` will do the trick.
 
 ## Theme usage
 
@@ -33,8 +33,13 @@ Note that comments can still be turned on or off for an invidual post:
 
 We recommend something like:
 
-```
+```php
 if ( comments_open() ) {
 	coral_talk_comments_template();
 }
 ```
+
+## Version
+Talk version <= `v3.9.1` use talk-wp-plugin `v0.0.6`
+
+Talk version >= `4.0.0` use talk-wp-plugin `v0.1.0`
