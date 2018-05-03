@@ -1,0 +1,5 @@
+{
+  "name": "davisshaver/talk-wp-plugin",
+  "description": "Composer wrapper for plugin",
+  "type": "wordpress-plugin"
+}
