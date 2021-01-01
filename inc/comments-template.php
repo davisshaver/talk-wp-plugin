@@ -39,7 +39,7 @@ if ( $talk_version == "5" ) : ?>
 else : ?>
 	<div class="<?php echo esc_attr( $talk_container_classes ); ?>" id="coral_thread"></div>
 	<script src="<?php echo esc_url( $static_url . '/static/embed.js' ); ?>" async onload="
-		Coral.talkStream = Coral.Talk.render(document.getElementById('coral_thread'), {
+		Coral.talkStream = Coral.Talk.render(document.getElementById('<?php echo esc_js( $div_id ); ?>'), {
 			talk: '<?php echo esc_url( $talk_url ); ?>',
 			auth_token: '<?php echo esc_js( apply_filters( 'coral_auth_token', '' ) ); ?>',
 		});
